@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="511b76bfd53244ebb81f302590871c9b" Name="Diagram1">
+        <EntityTypeShape EntityType="RTLSModel.TBL_Bolgeler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Departman" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Firmalar" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Gorev" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Rapor" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Ayarlar" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Personel" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Haritalar" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Map" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Gorevler" Width="1.5" PointX="9.375" PointY="3.75" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_GorevlerPersonel" Width="1.5" PointX="9.375" PointY="7.75" />
+        <EntityTypeShape EntityType="RTLSModel.TBL_Aksiyon" Width="1.5" PointX="11.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

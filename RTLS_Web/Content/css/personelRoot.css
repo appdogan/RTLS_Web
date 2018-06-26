@@ -1,0 +1,187 @@
+﻿::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(1, 165, 177, 0.50);
+    -webkit-box-shadow: inset 0 0 6px rgba(10, 105, 196, 0.5);
+}
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(10, 105, 196, 0.5);
+    }
+
+body {
+    background: url('/Content/img/zemin.jpg'); font-size:11px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#harita {
+    margin: 50px;
+}
+
+.kadran {
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 30px);
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.86);
+    padding: 5px;
+    width: 90px;
+    overflow: auto;
+    position: fixed;
+}
+
+.personel {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
+    background-color: #fff;
+    position: fixed;
+    top: 15px;
+    z-index: 2;
+    left: 5px;
+    border: 5px solid #444;
+    overflow: hidden;
+}
+
+    .personel img {
+        width: 100px;
+        height: auto;
+    }
+
+.kadran li {
+    width: 20px;
+    height: 5px;
+    margin-bottom: 1px;
+    background-color: #ccc;
+    position: relative;
+    margin-left:4px;
+}
+
+    .kadran li:last-child {
+        margin-bottom: 30px;
+    }
+
+    .kadran li:first-child {
+        margin-top: 30px;
+    }
+
+.kisi {
+    width: 15px;
+    height: 15px;
+    /*background-color: #0eb7ee;*/
+    border: 2px solid #0eb7ee;
+    position: absolute;
+    z-index: 2;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 0px;
+    display:none;
+}
+
+    .kisi .saat {
+        position: absolute;
+        padding: 5px 8px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.86);
+        color: #fff;
+        left: 18px;
+        top: -3px;
+        font-size: 14px;
+    }
+
+.kadran .saat {
+    position: absolute;
+    padding: 5px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.86);
+    color: #fff;
+    left: 18px;
+    top: -3px;
+    font-size: 12px;
+    display: none;
+    cursor: pointer;
+}
+
+.kadran li:hover {
+    background-color: #3bae06
+}
+
+.kadranKapsayici {
+    position: relative;
+}
+
+#personel_isim {
+    background-color: rgb(10, 105, 196);
+    color: #fff;
+    padding: 5px 25px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: fixed;
+    top: 50px;
+    left: 100px;
+    z-index: 1;
+    font-size: 14px;
+}
+
+#personel_tarih {
+    background-color: #444;
+    color: #fff;
+    padding: 5px 25px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: fixed;
+    top: 72px;
+    left: 102px;
+    z-index: 1;
+    font-size: 12px;
+}
+
+.slider {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 3;
+    width: 85px;
+}
+
+.btn1 {
+    background: #ff0000 !important;
+}
+
+.btn2 {
+    background: #efefef !important;
+}
+
+.btn3 {
+    background: #ffbd05 !important;
+}

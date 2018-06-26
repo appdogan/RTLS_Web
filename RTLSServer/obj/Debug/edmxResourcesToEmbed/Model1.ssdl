@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RTLSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_Ayarlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Com" Type="nvarchar" MaxLength="10" />
+    <Property Name="BaglantiHizi" Type="int" />
+    <Property Name="YetkiliMailleri" Type="nvarchar(max)" />
+    <Property Name="AcilDurumMailSablonu" Type="nvarchar(max)" />
+    <Property Name="AlarmMailGonder" Type="int" />
+    <Property Name="Port" Type="nvarchar" MaxLength="50" />
+    <Property Name="HaberlesmeTuru" Type="int" />
+    <Property Name="Tolerans" Type="int" />
+    <Property Name="Oran" Type="float" />
+  </EntityType>
+  <EntityType Name="TBL_Bolgeler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Harita_ID" Type="int" />
+    <Property Name="BolgeAdi" Type="nvarchar" MaxLength="200" />
+    <Property Name="Anchor1_X" Type="int" />
+    <Property Name="Anchor1_Y" Type="int" />
+    <Property Name="Anchor1_Z" Type="int" />
+    <Property Name="Anchor2_X" Type="int" />
+    <Property Name="Anchor2_Y" Type="int" />
+    <Property Name="Anchor2_Z" Type="int" />
+    <Property Name="Anchor3_X" Type="int" />
+    <Property Name="Anchor3_Y" Type="int" />
+    <Property Name="Anchor3_Z" Type="int" />
+    <Property Name="AnchorMaster_X" Type="int" />
+    <Property Name="AnchorMaster_Y" Type="int" />
+    <Property Name="AnchorMaster_Z" Type="int" />
+    <Property Name="dlt" Type="int" />
+    <Property Name="dlt_Zaman" Type="datetime" />
+    <Property Name="Anchor1_ID" Type="int" />
+    <Property Name="Anchor2_ID" Type="int" />
+    <Property Name="Anchor3_ID" Type="int" />
+    <Property Name="AnchorMaster_ID" Type="int" />
+    <Property Name="Anchor1_Ip" Type="nvarchar" MaxLength="15" />
+    <Property Name="Anchor2_Ip" Type="nvarchar" MaxLength="15" />
+    <Property Name="Anchor3_Ip" Type="nvarchar" MaxLength="15" />
+    <Property Name="AnchorMaster_Ip" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TBL_Haritalar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Map_ID" Type="int" />
+    <Property Name="HaritaAdi" Type="nvarchar" MaxLength="250" />
+    <Property Name="Aciklama" Type="nvarchar(max)" />
+    <Property Name="Resim_w" Type="int" />
+    <Property Name="Resim_h" Type="int" />
+    <Property Name="Harita_w" Type="int" />
+    <Property Name="Harita_h" Type="int" />
+    <Property Name="Oran" Type="int" />
+    <Property Name="dlt" Type="int" />
+    <Property Name="dlt_Zaman" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_Personel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Departman_ID" Type="int" />
+    <Property Name="Gorev_ID" Type="int" />
+    <Property Name="TagNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="Aciklama" Type="nvarchar(max)" />
+    <Property Name="KamraIp" Type="nvarchar" MaxLength="50" />
+    <Property Name="Firma_ID" Type="int" />
+    <Property Name="TagTipi" Type="nvarchar" MaxLength="50" />
+    <Property Name="RFID_Tag" Type="nvarchar" MaxLength="100" />
+    <Property Name="dlt" Type="int" />
+    <Property Name="dlt_Zaman" Type="datetime" />
+    <Property Name="OdaNo" Type="int" />
+    <Property Name="OdaIslem" Type="int" />
+    <Property Name="OdaIslemTarih" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_Rapor">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tag" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tarih" Type="datetime" />
+    <Property Name="PersonelID" Type="int" />
+    <Property Name="HaritaID" Type="int" />
+    <Property Name="BolgeID" Type="int" />
+    <Property Name="ToplamZaman" Type="int" />
+    <Property Name="SonOkuma" Type="datetime" />
+    <Property Name="dlt" Type="int" />
+  </EntityType>
+  <EntityContainer Name="RTLSModelStoreContainer">
+    <EntitySet Name="TBL_Ayarlar" EntityType="Self.TBL_Ayarlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Bolgeler" EntityType="Self.TBL_Bolgeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Haritalar" EntityType="Self.TBL_Haritalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Personel" EntityType="Self.TBL_Personel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Rapor" EntityType="Self.TBL_Rapor" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

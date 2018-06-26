@@ -1,0 +1,41 @@
+﻿<form id="FormGorev">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Başlangıç Tarihi</label>
+                <input class="form-control" name="BaslangicTarihi" id="BaslangicTarihi" type="date">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Bitiş Tarihi</label>
+                <input class="form-control" name="BitisTarihi" id="BitisTarihi" type="date">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Görevli Personel</label>
+                <select name="personel_ID" id="personel_ID" class="form-control"></select>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Görev Başlığı</label>
+                <input class="form-control" name="GorevBasligi" id="GorevBasligi" type="text">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label>Görev Notu</label>
+                <textarea class="form-control" name="Aciklama" id="Aciklama" rows="4"></textarea>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input name="Id" id="Id" type="hidden" value="0">
+            <button type="button" class="btn btn-info pull-right" onclick="FormGorev_kaydet();">Kaydet</button>
+        </div>
+    </div>
+</form>

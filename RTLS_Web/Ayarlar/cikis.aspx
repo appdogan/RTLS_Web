@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cikis.aspx.cs" Inherits="RTLS_Web.Ayarlar.cikis" %>

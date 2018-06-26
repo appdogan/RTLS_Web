@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RTLSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_Ayarlar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Com" Type="nvarchar" MaxLength="10" />
+          <Property Name="BaglantiHizi" Type="int" />
+          <Property Name="YetkiliMailleri" Type="nvarchar(max)" />
+          <Property Name="AcilDurumMailSablonu" Type="nvarchar(max)" />
+          <Property Name="AlarmMailGonder" Type="int" />
+          <Property Name="Port" Type="nvarchar" MaxLength="50" />
+          <Property Name="HaberlesmeTuru" Type="int" />
+          <Property Name="Tolerans" Type="int" />
+          <Property Name="Oran" Type="float" />
+        </EntityType>
+        <EntityType Name="TBL_Bolgeler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Harita_ID" Type="int" />
+          <Property Name="BolgeAdi" Type="nvarchar" MaxLength="200" />
+          <Property Name="Anchor1_X" Type="int" />
+          <Property Name="Anchor1_Y" Type="int" />
+          <Property Name="Anchor1_Z" Type="int" />
+          <Property Name="Anchor2_X" Type="int" />
+          <Property Name="Anchor2_Y" Type="int" />
+          <Property Name="Anchor2_Z" Type="int" />
+          <Property Name="Anchor3_X" Type="int" />
+          <Property Name="Anchor3_Y" Type="int" />
+          <Property Name="Anchor3_Z" Type="int" />
+          <Property Name="AnchorMaster_X" Type="int" />
+          <Property Name="AnchorMaster_Y" Type="int" />
+          <Property Name="AnchorMaster_Z" Type="int" />
+          <Property Name="dlt" Type="int" />
+          <Property Name="dlt_Zaman" Type="datetime" />
+          <Property Name="Anchor1_ID" Type="int" />
+          <Property Name="Anchor2_ID" Type="int" />
+          <Property Name="Anchor3_ID" Type="int" />
+          <Property Name="AnchorMaster_ID" Type="int" />
+          <Property Name="Anchor1_Ip" Type="nvarchar" MaxLength="15" />
+          <Property Name="Anchor2_Ip" Type="nvarchar" MaxLength="15" />
+          <Property Name="Anchor3_Ip" Type="nvarchar" MaxLength="15" />
+          <Property Name="AnchorMaster_Ip" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="TBL_Haritalar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Map_ID" Type="int" />
+          <Property Name="HaritaAdi" Type="nvarchar" MaxLength="250" />
+          <Property Name="Aciklama" Type="nvarchar(max)" />
+          <Property Name="Resim_w" Type="int" />
+          <Property Name="Resim_h" Type="int" />
+          <Property Name="Harita_w" Type="int" />
+          <Property Name="Harita_h" Type="int" />
+          <Property Name="Oran" Type="int" />
+          <Property Name="dlt" Type="int" />
+          <Property Name="dlt_Zaman" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TBL_Personel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Departman_ID" Type="int" />
+          <Property Name="Gorev_ID" Type="int" />
+          <Property Name="TagNo" Type="nvarchar" MaxLength="15" />
+          <Property Name="Aciklama" Type="nvarchar(max)" />
+          <Property Name="KamraIp" Type="nvarchar" MaxLength="50" />
+          <Property Name="Firma_ID" Type="int" />
+          <Property Name="TagTipi" Type="nvarchar" MaxLength="50" />
+          <Property Name="RFID_Tag" Type="nvarchar" MaxLength="100" />
+          <Property Name="dlt" Type="int" />
+          <Property Name="dlt_Zaman" Type="datetime" />
+          <Property Name="OdaNo" Type="int" />
+          <Property Name="OdaIslem" Type="int" />
+          <Property Name="OdaIslemTarih" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TBL_Rapor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tag" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tarih" Type="datetime" />
+          <Property Name="PersonelID" Type="int" />
+          <Property Name="HaritaID" Type="int" />
+          <Property Name="BolgeID" Type="int" />
+          <Property Name="ToplamZaman" Type="int" />
+          <Property Name="SonOkuma" Type="datetime" />
+          <Property Name="dlt" Type="int" />
+        </EntityType>
+        <EntityContainer Name="RTLSModelStoreContainer">
+          <EntitySet Name="TBL_Ayarlar" EntityType="Self.TBL_Ayarlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_Bolgeler" EntityType="Self.TBL_Bolgeler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_Haritalar" EntityType="Self.TBL_Haritalar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_Personel" EntityType="Self.TBL_Personel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_Rapor" EntityType="Self.TBL_Rapor" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RTLSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBL_Ayarlar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Com" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BaglantiHizi" Type="Int32" />
+          <Property Name="YetkiliMailleri" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AcilDurumMailSablonu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AlarmMailGonder" Type="Int32" />
+          <Property Name="Port" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HaberlesmeTuru" Type="Int32" />
+          <Property Name="Tolerans" Type="Int32" />
+          <Property Name="Oran" Type="Double" />
+        </EntityType>
+        <EntityType Name="TBL_Bolgeler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Harita_ID" Type="Int32" />
+          <Property Name="BolgeAdi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Anchor1_X" Type="Int32" />
+          <Property Name="Anchor1_Y" Type="Int32" />
+          <Property Name="Anchor1_Z" Type="Int32" />
+          <Property Name="Anchor2_X" Type="Int32" />
+          <Property Name="Anchor2_Y" Type="Int32" />
+          <Property Name="Anchor2_Z" Type="Int32" />
+          <Property Name="Anchor3_X" Type="Int32" />
+          <Property Name="Anchor3_Y" Type="Int32" />
+          <Property Name="Anchor3_Z" Type="Int32" />
+          <Property Name="AnchorMaster_X" Type="Int32" />
+          <Property Name="AnchorMaster_Y" Type="Int32" />
+          <Property Name="AnchorMaster_Z" Type="Int32" />
+          <Property Name="dlt" Type="Int32" />
+          <Property Name="dlt_Zaman" Type="DateTime" Precision="3" />
+          <Property Name="Anchor1_ID" Type="Int32" />
+          <Property Name="Anchor2_ID" Type="Int32" />
+          <Property Name="Anchor3_ID" Type="Int32" />
+          <Property Name="AnchorMaster_ID" Type="Int32" />
+          <Property Name="Anchor1_Ip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Anchor2_Ip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Anchor3_Ip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="AnchorMaster_Ip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBL_Haritalar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HaritaAdi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Resim_w" Type="Int32" />
+          <Property Name="Resim_h" Type="Int32" />
+          <Property Name="Harita_w" Type="Int32" />
+          <Property Name="Harita_h" Type="Int32" />
+          <Property Name="dlt" Type="Int32" />
+          <Property Name="dlt_Zaman" Type="DateTime" Precision="3" />
+          <Property Name="Map_ID" Type="Int32" />
+          <Property Name="Oran" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBL_Personel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Departman_ID" Type="Int32" />
+          <Property Name="Gorev_ID" Type="Int32" />
+          <Property Name="TagNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KamraIp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Firma_ID" Type="Int32" />
+          <Property Name="TagTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dlt" Type="Int32" />
+          <Property Name="dlt_Zaman" Type="DateTime" Precision="3" />
+          <Property Name="RFID_Tag" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OdaNo" Type="Int32" />
+          <Property Name="OdaIslem" Type="Int32" />
+          <Property Name="OdaIslemTarih" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TBL_Rapor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
+          <Property Name="PersonelID" Type="Int32" />
+          <Property Name="HaritaID" Type="Int32" />
+          <Property Name="BolgeID" Type="Int32" />
+          <Property Name="ToplamZaman" Type="Int32" />
+          <Property Name="SonOkuma" Type="DateTime" Precision="3" />
+          <Property Name="dlt" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="RTLSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBL_Ayarlar" EntityType="Self.TBL_Ayarlar" />
+          <EntitySet Name="TBL_Bolgeler" EntityType="Self.TBL_Bolgeler" />
+          <EntitySet Name="TBL_Haritalar" EntityType="Self.TBL_Haritalar" />
+          <EntitySet Name="TBL_Personel" EntityType="Self.TBL_Personel" />
+          <EntitySet Name="TBL_Rapor" EntityType="Self.TBL_Rapor" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RTLSModelStoreContainer" CdmEntityContainer="RTLSEntities">
+          <EntitySetMapping Name="TBL_Ayarlar">
+            <EntityTypeMapping TypeName="RTLSModel.TBL_Ayarlar">
+              <MappingFragment StoreEntitySet="TBL_Ayarlar">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Com" ColumnName="Com" />
+                <ScalarProperty Name="BaglantiHizi" ColumnName="BaglantiHizi" />
+                <ScalarProperty Name="YetkiliMailleri" ColumnName="YetkiliMailleri" />
+                <ScalarProperty Name="AcilDurumMailSablonu" ColumnName="AcilDurumMailSablonu" />
+                <ScalarProperty Name="AlarmMailGonder" ColumnName="AlarmMailGonder" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="HaberlesmeTuru" ColumnName="HaberlesmeTuru" />
+                <ScalarProperty Name="Tolerans" ColumnName="Tolerans" />
+                <ScalarProperty Name="Oran" ColumnName="Oran" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_Bolgeler">
+            <EntityTypeMapping TypeName="RTLSModel.TBL_Bolgeler">
+              <MappingFragment StoreEntitySet="TBL_Bolgeler">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Harita_ID" ColumnName="Harita_ID" />
+                <ScalarProperty Name="BolgeAdi" ColumnName="BolgeAdi" />
+                <ScalarProperty Name="Anchor1_X" ColumnName="Anchor1_X" />
+                <ScalarProperty Name="Anchor1_Y" ColumnName="Anchor1_Y" />
+                <ScalarProperty Name="Anchor1_Z" ColumnName="Anchor1_Z" />
+                <ScalarProperty Name="Anchor2_X" ColumnName="Anchor2_X" />
+                <ScalarProperty Name="Anchor2_Y" ColumnName="Anchor2_Y" />
+                <ScalarProperty Name="Anchor2_Z" ColumnName="Anchor2_Z" />
+                <ScalarProperty Name="Anchor3_X" ColumnName="Anchor3_X" />
+                <ScalarProperty Name="Anchor3_Y" ColumnName="Anchor3_Y" />
+                <ScalarProperty Name="Anchor3_Z" ColumnName="Anchor3_Z" />
+                <ScalarProperty Name="AnchorMaster_X" ColumnName="AnchorMaster_X" />
+                <ScalarProperty Name="AnchorMaster_Y" ColumnName="AnchorMaster_Y" />
+                <ScalarProperty Name="AnchorMaster_Z" ColumnName="AnchorMaster_Z" />
+                <ScalarProperty Name="dlt" ColumnName="dlt" />
+                <ScalarProperty Name="dlt_Zaman" ColumnName="dlt_Zaman" />
+                <ScalarProperty Name="Anchor1_ID" ColumnName="Anchor1_ID" />
+                <ScalarProperty Name="Anchor2_ID" ColumnName="Anchor2_ID" />
+                <ScalarProperty Name="Anchor3_ID" ColumnName="Anchor3_ID" />
+                <ScalarProperty Name="AnchorMaster_ID" ColumnName="AnchorMaster_ID" />
+                <ScalarProperty Name="Anchor1_Ip" ColumnName="Anchor1_Ip" />
+                <ScalarProperty Name="Anchor2_Ip" ColumnName="Anchor2_Ip" />
+                <ScalarProperty Name="Anchor3_Ip" ColumnName="Anchor3_Ip" />
+                <ScalarProperty Name="AnchorMaster_Ip" ColumnName="AnchorMaster_Ip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_Haritalar">
+            <EntityTypeMapping TypeName="RTLSModel.TBL_Haritalar">
+              <MappingFragment StoreEntitySet="TBL_Haritalar">
+                <ScalarProperty Name="Oran" ColumnName="Oran" />
+                <ScalarProperty Name="Map_ID" ColumnName="Map_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="HaritaAdi" ColumnName="HaritaAdi" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Resim_w" ColumnName="Resim_w" />
+                <ScalarProperty Name="Resim_h" ColumnName="Resim_h" />
+                <ScalarProperty Name="Harita_w" ColumnName="Harita_w" />
+                <ScalarProperty Name="Harita_h" ColumnName="Harita_h" />
+                <ScalarProperty Name="dlt" ColumnName="dlt" />
+                <ScalarProperty Name="dlt_Zaman" ColumnName="dlt_Zaman" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_Personel">
+            <EntityTypeMapping TypeName="RTLSModel.TBL_Personel">
+              <MappingFragment StoreEntitySet="TBL_Personel">
+                <ScalarProperty Name="OdaIslemTarih" ColumnName="OdaIslemTarih" />
+                <ScalarProperty Name="OdaIslem" ColumnName="OdaIslem" />
+                <ScalarProperty Name="OdaNo" ColumnName="OdaNo" />
+                <ScalarProperty Name="RFID_Tag" ColumnName="RFID_Tag" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Ad" ColumnName="Ad" />
+                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+                <ScalarProperty Name="Departman_ID" ColumnName="Departman_ID" />
+                <ScalarProperty Name="Gorev_ID" ColumnName="Gorev_ID" />
+                <ScalarProperty Name="TagNo" ColumnName="TagNo" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="KamraIp" ColumnName="KamraIp" />
+                <ScalarProperty Name="Firma_ID" ColumnName="Firma_ID" />
+                <ScalarProperty Name="TagTipi" ColumnName="TagTipi" />
+                <ScalarProperty Name="dlt" ColumnName="dlt" />
+                <ScalarProperty Name="dlt_Zaman" ColumnName="dlt_Zaman" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_Rapor">
+            <EntityTypeMapping TypeName="RTLSModel.TBL_Rapor">
+              <MappingFragment StoreEntitySet="TBL_Rapor">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+                <ScalarProperty Name="HaritaID" ColumnName="HaritaID" />
+                <ScalarProperty Name="BolgeID" ColumnName="BolgeID" />
+                <ScalarProperty Name="ToplamZaman" ColumnName="ToplamZaman" />
+                <ScalarProperty Name="SonOkuma" ColumnName="SonOkuma" />
+                <ScalarProperty Name="dlt" ColumnName="dlt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

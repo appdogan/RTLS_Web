@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RTLSModelStoreContainer" CdmEntityContainer="RTLSEntities">
+    <EntitySetMapping Name="TBL_Ayarlar">
+      <EntityTypeMapping TypeName="RTLSModel.TBL_Ayarlar">
+        <MappingFragment StoreEntitySet="TBL_Ayarlar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Com" ColumnName="Com" />
+          <ScalarProperty Name="BaglantiHizi" ColumnName="BaglantiHizi" />
+          <ScalarProperty Name="YetkiliMailleri" ColumnName="YetkiliMailleri" />
+          <ScalarProperty Name="AcilDurumMailSablonu" ColumnName="AcilDurumMailSablonu" />
+          <ScalarProperty Name="AlarmMailGonder" ColumnName="AlarmMailGonder" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="HaberlesmeTuru" ColumnName="HaberlesmeTuru" />
+          <ScalarProperty Name="Tolerans" ColumnName="Tolerans" />
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Bolgeler">
+      <EntityTypeMapping TypeName="RTLSModel.TBL_Bolgeler">
+        <MappingFragment StoreEntitySet="TBL_Bolgeler">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Harita_ID" ColumnName="Harita_ID" />
+          <ScalarProperty Name="BolgeAdi" ColumnName="BolgeAdi" />
+          <ScalarProperty Name="Anchor1_X" ColumnName="Anchor1_X" />
+          <ScalarProperty Name="Anchor1_Y" ColumnName="Anchor1_Y" />
+          <ScalarProperty Name="Anchor1_Z" ColumnName="Anchor1_Z" />
+          <ScalarProperty Name="Anchor2_X" ColumnName="Anchor2_X" />
+          <ScalarProperty Name="Anchor2_Y" ColumnName="Anchor2_Y" />
+          <ScalarProperty Name="Anchor2_Z" ColumnName="Anchor2_Z" />
+          <ScalarProperty Name="Anchor3_X" ColumnName="Anchor3_X" />
+          <ScalarProperty Name="Anchor3_Y" ColumnName="Anchor3_Y" />
+          <ScalarProperty Name="Anchor3_Z" ColumnName="Anchor3_Z" />
+          <ScalarProperty Name="AnchorMaster_X" ColumnName="AnchorMaster_X" />
+          <ScalarProperty Name="AnchorMaster_Y" ColumnName="AnchorMaster_Y" />
+          <ScalarProperty Name="AnchorMaster_Z" ColumnName="AnchorMaster_Z" />
+          <ScalarProperty Name="dlt" ColumnName="dlt" />
+          <ScalarProperty Name="dlt_Zaman" ColumnName="dlt_Zaman" />
+          <ScalarProperty Name="Anchor1_ID" ColumnName="Anchor1_ID" />
+          <ScalarProperty Name="Anchor2_ID" ColumnName="Anchor2_ID" />
+          <ScalarProperty Name="Anchor3_ID" ColumnName="Anchor3_ID" />
+          <ScalarProperty Name="AnchorMaster_ID" ColumnName="AnchorMaster_ID" />
+          <ScalarProperty Name="Anchor1_Ip" ColumnName="Anchor1_Ip" />
+          <ScalarProperty Name="Anchor2_Ip" ColumnName="Anchor2_Ip" />
+          <ScalarProperty Name="Anchor3_Ip" ColumnName="Anchor3_Ip" />
+          <ScalarProperty Name="AnchorMaster_Ip" ColumnName="AnchorMaster_Ip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Haritalar">
+      <EntityTypeMapping TypeName="RTLSModel.TBL_Haritalar">
+        <MappingFragment StoreEntitySet="TBL_Haritalar">
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
+          <ScalarProperty Name="Map_ID" ColumnName="Map_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HaritaAdi" ColumnName="HaritaAdi" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Resim_w" ColumnName="Resim_w" />
+          <ScalarProperty Name="Resim_h" ColumnName="Resim_h" />
+          <ScalarProperty Name="Harita_w" ColumnName="Harita_w" />
+          <ScalarProperty Name="Harita_h" ColumnName="Harita_h" />
+          <ScalarProperty Name="dlt" ColumnName="dlt" />
+          <ScalarProperty Name="dlt_Zaman" ColumnName="dlt_Zaman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Personel">
+      <EntityTypeMapping TypeName="RTLSModel.TBL_Personel">
+        <MappingFragment StoreEntitySet="TBL_Personel">
+          <ScalarProperty Name="OdaIslemTarih" ColumnName="OdaIslemTarih" />
+          <ScalarProperty Name="OdaIslem" ColumnName="OdaIslem" />
+          <ScalarProperty Name="OdaNo" ColumnName="OdaNo" />
+          <ScalarProperty Name="RFID_Tag" ColumnName="RFID_Tag" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Departman_ID" ColumnName="Departman_ID" />
+          <ScalarProperty Name="Gorev_ID" ColumnName="Gorev_ID" />
+          <ScalarProperty Name="TagNo" ColumnName="TagNo" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="KamraIp" ColumnName="KamraIp" />
+          <ScalarProperty Name="Firma_ID" ColumnName="Firma_ID" />
+          <ScalarProperty Name="TagTipi" ColumnName="TagTipi" />
+          <ScalarProperty Name="dlt" ColumnName="dlt" />
+          <ScalarProperty Name="dlt_Zaman" ColumnName="dlt_Zaman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Rapor">
+      <EntityTypeMapping TypeName="RTLSModel.TBL_Rapor">
+        <MappingFragment StoreEntitySet="TBL_Rapor">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+          <ScalarProperty Name="HaritaID" ColumnName="HaritaID" />
+          <ScalarProperty Name="BolgeID" ColumnName="BolgeID" />
+          <ScalarProperty Name="ToplamZaman" ColumnName="ToplamZaman" />
+          <ScalarProperty Name="SonOkuma" ColumnName="SonOkuma" />
+          <ScalarProperty Name="dlt" ColumnName="dlt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

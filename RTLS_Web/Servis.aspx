@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Servis.aspx.cs" Inherits="RTLS_Web.Servis" %>

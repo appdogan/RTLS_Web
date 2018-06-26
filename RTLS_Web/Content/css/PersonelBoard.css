@@ -1,0 +1,125 @@
+﻿.kameraReload {
+    float: right;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    margin-top:4px;
+    opacity: .5;
+    cursor:pointer;
+}
+    .kameraReload:hover {
+        opacity: 1;
+    }
+.modal-title{width:100%;}
+.tag_Aktif {
+    background-color: #4cff00 !important;
+    color: #014900 !important;
+    border: 1px solid #419407;
+}
+.tagDurum {
+    padding: 3px 8px;
+    background-color: #ccc;
+    border: 1px solid #808080;
+    color: #444;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.buton {
+    padding: 4px 8px;
+    background-color: #efefef;
+    /*border: 1px solid #ccc;*/
+    color: #ccc;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-left:5px;
+}
+.personelKamera {
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    /*background-color: #808080;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 15px;
+    transition: 0.8s ease;
+    border: 2px solid #808080;
+    cursor: pointer;
+}
+    .personelKamera:hover {
+        color: #fff;
+        background-color: #ff6a00;
+        border: 2px solid #ff6a00;
+    }
+.kameraFrame{
+    width:100%;
+    height:300px;
+    border:0px;
+}
+.personelAdim {
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    /*background-color: #808080;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 15px;
+    transition: 0.8s ease;
+    border: 2px solid #808080;
+    cursor: pointer;
+}
+    .personelAdim:hover {
+        color: #fff;
+        background-color: #ff6a00;
+        border: 2px solid #ff6a00;
+    }
+.alarm {
+    background-color: #ff0000;
+    color:#fff;
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.takili {
+    background-color: #419407;
+    border: 1px solid #419407;
+    color: #fff;
+}
+.uyari {
+    background-color: #ff6a00;
+    border: 1px solid #ff6a00;
+    color: #fff;
+}
+#RaporIcerik .list-group {
+    font-size: 12px;
+}
+#RaporIcerik .list-group b {
+    width:65px; float:left;
+}
+#RaporIcerik .card{margin-bottom:15px;}
+.konumIcon {
+    float: right;
+    cursor: pointer;
+    transition: 0.5s ease;
+    display:none;
+}
+.konumIcon:hover {
+    color:#419407;
+}
+iframe{border:0px; width:100%;}
+@media (min-width: 992px) {
+    .modal-lg {
+        max-width: 95%;
+    }
+}

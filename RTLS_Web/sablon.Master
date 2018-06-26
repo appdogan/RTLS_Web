@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sablon.master.cs" Inherits="RTLS_Web.sablon" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>RTLS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/Content/css/font.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/Content/js/jquery-1.10.2.min.js"></script>
+    <script src="/Content/js/jquery-ui.min.js"></script>
+    <script src="/Content/js/sweetalert2.all.js"></script>
+    <script src="/Content/js/jquery.ez-bg-resize.js"></script>
+    <script src="/Content/js/main.js"></script>
+    <script src="/Content/js/bootstrap.min.js"></script>
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="/Content/css/main.css" rel="stylesheet" />
+    <link href="/Content/DataTables/datatables.min.css" rel="stylesheet" />
+    <link href="/Content/DataTables/Responsive-2.2.1/css/responsive.jqueryui.min.css" rel="stylesheet" />
+    <script src="/Content/DataTables/datatables.min.js"></script>
+    <style>
+        h1 {
+            font-family: fa5-proxima-nova;
+            font-weight: 600;
+            font-style: normal;
+            margin-top: 70px;
+        }
+
+        .m25 {
+            margin: 25px;
+        }
+
+        .p15 {
+            padding: 15px;
+        }
+
+        .beyaz {
+            background-color: #fff;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+    <script>
+        $(function () {
+            $('.Tabs').html('<li onclick="parent.location=\'index.html\'"><i class="fas fa-home"></i></li>');
+        });
+    </script>
+</html>
+<asp:contentplaceholder id="Script" runat="server">
+</asp:contentplaceholder>
