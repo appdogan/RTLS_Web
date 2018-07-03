@@ -5,7 +5,7 @@ var io = require('socket.io').listen(3000);
 io.sockets.on('connection', function (socket) {
     server.on("message", function (data) {
         //console.log("--" + data.length + "--");
-        if (data.length == 4) {
+        if (data.length == 5) {  //created by onur
             console.log(data[0] + "," + data[1] + "," + data[2] + "," + data[3]);
             socket.emit('mesajgitti', data[0] + "," + data[1] + "," + data[2] + "," + data[3]);
         } else if (data.length == 13) {
